@@ -1,0 +1,12 @@
+# config/routes/consume_api.yaml
+app:
+    path: /consume/api/data
+    controller: App\Controller\TransactionController::consumeApiData
+aget_montant_transaction:
+    path: /api/get-total-expenses
+    controller: App\Controller\ExpensesController::getTotalExpenses
+budget_consume:
+    path: /consume/budget
+    controller: App\Controller\TransactionController::consumeShowBudget
+
+

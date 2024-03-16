@@ -1,3 +1,12 @@
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
+
+
+# config/routes.yaml
+
+#create_transaction:
+  #  path: /transaction/create-transaction
+ #   controller: App\Controller\TransactionController::createTransaction
+ #   methods: ['POST']
+ 

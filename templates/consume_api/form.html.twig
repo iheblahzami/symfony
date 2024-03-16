@@ -1,0 +1,28 @@
+{# templates/consume_api/form.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Consume API Form</h1>
+
+    {{ form_start(form) }}
+
+    {# Display the dropdown field for selecting nomCategorie #}
+    <div class="form-group">
+        {{ form_label(form.nomCategorie, 'Nom Categorie') }}
+        {{ form_widget(form.nomCategorie, { 'attr': {'class': 'form-control'} }) }}
+    </div>
+
+    {# Display the text field for montant #}
+    <div class="form-group">
+        {{ form_label(form.montant, 'Montant') }}
+        {{ form_widget(form.montant, { 'attr': {'class': 'form-control'} }) }}
+    </div>
+
+    {# Display the submit button #}
+    <div class="form-group">
+        {{ form_widget(form.submit, { 'attr': {'class': 'btn btn-primary'} }) }}
+    </div>
+
+    {{ form_end(form) }}
+{% endblock %}
