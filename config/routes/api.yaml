@@ -1,0 +1,15 @@
+# config/routes/api.yaml
+
+show_by_id:
+    path: /{id}
+    controller: App\Controller\BudgetController::show
+app_budget_index:
+    path: /get
+    controller: App\Controller\BudgetController::index
+app_budget:
+    path: /api/data
+    controller: App\Controller\BudgetController::getData
+aget_montant_budget:
+    path: /api/get-data
+    controller: App\Controller\BudgetController::getMontantBudget
+

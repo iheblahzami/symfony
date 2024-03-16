@@ -1,0 +1,31 @@
+<?php
+
+namespace App\DTO;
+
+class TransactionDTO
+{
+    private $nomtransaction;
+    private $montant;
+
+    public function getNomtransaction(): ?string
+    {
+        return $this->nomtransaction;
+    }
+
+    public function setNomtransaction(string $nomtransaction): self
+    {
+        $this->nomtransaction = $nomtransaction;
+        return $this;
+    }
+
+    public function getMontant(): ?int
+    {
+        return $this->montant;
+    }
+
+    public function setMontant(int $montant): self
+    {
+        $this->montant = $montant;
+        return $this;
+    }
+}
