@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Savings index{% endblock %}
+
+{% block body %}
+    <h1>Savings index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>MontantTotal</th>
+                <th>Mois</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for saving in savings %}
+            <tr>
+                <td>{{ saving.id }}</td>
+                <td>{{ saving.montantTotal }}</td>
+                <td>{{ saving.mois ? saving.mois|date('Y-m-d') : '' }}</td>
+                <td>
+                    <a href="{{ path('app_savings_show', {'id': saving.id}) }}">show</a>
+                    <a href="{{ path('app_savings_edit', {'id': saving.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_savings_new') }}">Create new</a>
+{% endblock %}

@@ -1,0 +1,10 @@
+# config/routes/consume_api.yaml
+app_transaction_new:
+    path: /consume/api/data
+    controller: App\Controller\SavingsController::consumeApiData
+expenses:
+    path: /consume/api/get-total-expenses
+    controller: App\Controller\SavingsController::consumeTotalExpenses
+calcul_savings:
+    path: /savings_calculating
+    controller: App\Controller\SavingsController::calculateSavings
